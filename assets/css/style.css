@@ -1,0 +1,11 @@
+/* box-sizing này là áp dụng cho tất cả các phần tử */
+* {
+    box-sizing:border-box;
+}
+html{
+    font-size:62.25%
+}
+/* Khôi phục lại cỡ chữ mặc định theo fontsize */
+body{
+    font-size: 1.6rem;
+}
