@@ -1,11 +1,93 @@
 /* box-sizing này là áp dụng cho tất cả các phần tử */
 * {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
-html{
-    font-size:62.25%
+html {
+  font-size: 62.25%;
 }
 /* Khôi phục lại cỡ chữ mặc định theo fontsize */
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
+  /* Khi khai baó ở trên này thì nó sẽ thừa kế cho tất cả thẻ ở dưới */
+  font-family: "Poppins", sans-serif;
+}
+/* ============== common ================= */
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  /* Thêm khoảng đệm, trái phải 16 px, text dài ra thì xung quanh nó cũng dãn theo*/
+  min-width: 118px;
+  padding: 0px 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+.main-content {
+  width: 1170px;
+  /* can le trai */
+  margin-left: auto;
+  /* can le phai */
+  margin-right: auto;
+  /* co le cua cac website */
+  max-width: calc(100% - 48px);
+}
+/* ================= header ==================== */
+.header{
+    background: #dba5db;
+}
+.header.fixed{
+    position: sticky;
+    top: -28px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 26px 0 8px;
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+/* tác động lên tất cả thẻ a trong khối navigation*/
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+}
+p {
+  /* Nó sẽ căn giữa các box chứa nó */
+  text-align: center;
+}
+/* Hiệu ứng bóng đổ */
+.nav a:hover {
+  text-shadow: 1px 00 currentColor;
+}
+.nav li.active a,
+.nav li.active a::after {
+  position: absolute;
+  /*  căn trái 21 pixel */
+  left: 21px;
+  /* Căn dưới 6 pixel */
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+.header .btn-sign-up{
+    min-width: 144px;
+}
+.header .action{
+    margin-left: 49px;
 }
